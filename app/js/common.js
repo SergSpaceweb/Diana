@@ -17,7 +17,7 @@ $(function() {
 
 
 
-	$('.menu-main').find('.menu-main__item a').click(function( event ){
+	$('.menu-main').find('.menu-main__item > a').click(function( event ){
 		event.preventDefault();
 		
       //Expand or collapse this panel
@@ -27,6 +27,7 @@ $(function() {
       $(".menu-sub-1").not($(this).next()).slideUp('fast');
 
   });
+
 
 
 	$('.gallery').slick({
