@@ -1,0 +1,1110 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+body
+	min-width: 320px
+	font-family: $font-default
+	font-size: 16px
+	line-height: 18px
+	color: $text-color
+	background-color: #f8fafe
+
+a
+	text-decoration: none
+	color: $text-color
+	&:hover
+		color: #333333
+
+.header-top
+	padding: 12px 0
+	border-top: 1px solid #e5e6e6
+	border-bottom: 1px solid #e5e6e6
+	background-color: #fff
+
+.header-top__nav-btn
+	display: none
+	
+.header-top__time
+	position: relative
+	padding-left: 25px
+	font-family: "RobotoRegular", sans-serif
+	&:before
+		content: ''
+		position: absolute
+		left: 0
+		top: 50%
+		transform: translate(0, -50%)
+		width: 20px
+		height: 20px
+		background-image: url(../img/header/header-sprite.png)
+		background-position: -5px -58px
+
+.header-top__currency
+	text-align: center
+	font-family: "OpenSansBold", sans-serif
+	padding-top: 5px
+	a
+		position: relative
+		padding-right: 15px
+		text-decoration: underline
+		font-family: $font-default
+		&:after
+			content: ''
+			position: absolute
+			right: 0px
+			top: 8px
+			width: 0
+			height: 0
+			border: 5px solid transparent
+			border-top-color: $text-color
+			border-bottom: 0
+		&:hover:after
+					border-top-color: #333333
+
+.currency-select
+	display: none
+	position: absolute
+	z-index: 10
+	right: 37px
+	list-style: none
+	padding: 0
+	padding-top: 5px
+	margin: 0
+	background-color: rgba(255, 255, 255, .9)
+	li
+		display: block
+		text-align: right
+		border-bottom: 1px solid #e5e6e6
+		a
+			display: block
+			padding-top: 10px
+			padding-bottom: 10px
+			padding-left: 15px
+			text-decoration: none
+			&:after
+				display: none
+			&:hover	
+				background-color: #666
+				color: #fff
+		
+
+
+
+.header-top__nav
+	float: right
+	padding-top: 5px
+	ul
+		padding: 0
+		margin: 0
+		font-size: 0
+		list-style: none
+	li
+		display: inline-block
+		border-right: 1px solid $text-color
+		font-size: 16px
+		a
+			position: relative
+			display: block
+			padding: 0 20px 0 40px
+			&:before
+				content: ''
+				position: absolute
+				left: 15px
+				top: 50%
+				transform: translate(0, -50%)
+				width: 20px
+				height: 20px
+				background-image: url(../img/header/header-sprite.png)
+		&:nth-child(1)
+			a:before
+				background-position: -5px -185px
+			a:hover:before
+				background-position: -5px -164px
+		&:nth-child(2)
+			a:before
+				background-position: -5px -100px
+			a:hover:before
+				background-position: -5px -80px
+		&:nth-child(3)
+			a:before
+				background-position: -5px -17px
+			a:hover:before
+				background-position: -5px 2px
+		&:nth-child(4)
+			a:before
+				background-position: -2px -142px
+			a:hover:before
+				background-position: -2px -120px
+		&:nth-child(5)
+			a:before
+				background-position: 0 -227px
+			a:hover:before
+				background-position: 0 -206px
+		&:nth-child(6)
+			border: none
+			a
+				padding-left: 25px
+				padding-right: 30px
+				&:before
+					display: none
+				&:after
+					content: ''
+					position: absolute
+					right: 12px
+					top: 6px
+					width: 0
+					height: 0
+					border: 5px solid transparent
+					border-top-color: $text-color
+					border-bottom: 0
+				&:hover:after
+					border-top-color: #333333
+
+.lang-select
+	display: none
+	position: absolute
+	z-index: 10
+	right: 14px
+	list-style: none
+	padding: 0
+	padding-top: 5px
+	margin: 0
+	background-color: rgba(255, 255, 255, .9)
+	li
+		display: block
+		border: none
+		text-align: right
+		border-bottom: 1px solid #e5e6e6
+		a
+			padding-top: 10px
+			padding-bottom: 10px
+			text-decoration: none
+			&:after
+				display: none
+			&:hover	
+				background-color: #666
+				color: #fff
+
+.header-mid
+	padding: 25px 0 7px 0
+
+.logo
+	position: relative
+	display: block
+	width: 255px
+	padding-left: 70px
+	&:before
+		content: ''
+		left: 0
+		top: 0
+		position: absolute
+		width: 64px
+		height: 64px
+		background-image: url(../img/header/logo.png)
+		background-size: cover
+	&:hover
+		text-decoration: none
+		color: $text-color
+	span
+		display: block
+
+.logo__name
+	font-family: "RobotoBlack", sans-serif
+	font-size: 56px
+	line-height: 50px
+	color: $accent
+	text-transform: uppercase
+	letter-spacing: 2px
+
+.logo__text
+	letter-spacing: -0.2px
+
+.logo--footer
+	&:before
+		width: 64px
+		height: 64px
+		background-image: url(../img/footer/logo--footer.png)
+		background-size: cover
+	.logo__name, 
+	.logo__text
+		color: #fff
+
+.header-mid__search
+	position: relative
+	margin-bottom: 11px
+	input
+		width: 100%
+		height: 38px
+		padding-left: 20px
+		padding-right: 40px
+		outline: none
+		border: 1px solid #e5e6e6
+		border-radius: 17px
+	button
+		position: absolute
+		top: 50%
+		transform: translate(0, -50%)
+		right: 15px
+		width: 20px
+		height: 20px
+		border: none
+		background: url(../img/header/header-sprite-1.png) -5px 0
+		outline: none
+
+.header-mid__nav
+	color: #666666
+	font-family: "OpenSansBold", sans-serif
+	ul
+		margin: 0
+		padding: 0
+		list-style: none
+		font-size: 0
+	li
+		display: inline-block
+		border-right: 1px solid #666666
+		font-size: 16px
+		&:last-child
+			border-right: none
+		a
+			padding-left: 11px
+			padding-right: 11px
+		&:first-child
+			a 
+				padding-left: 0
+		&:last-child
+			a 
+				padding-right: 0
+
+.header-mid__contacts
+	padding-left: 20px
+	line-height: 23px
+
+.header-mid__tel
+	position: relative 
+	white-space: nowrap
+	&:before
+		content: ''
+		position: absolute
+		top: 11px
+		left: -22px
+		width: 20px
+		height: 20px
+		background: url(../img/header/header-sprite-1.png) -5px 42px
+
+.header-mid__mail
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		top: 0px
+		left: -22px
+		width: 20px
+		height: 20px
+		background: url(../img/header/header-sprite-1.png) -5px 23px
+
+.header-mid__btn
+	margin-right: -15px
+	
+.btn
+	display: block
+	padding: 10px
+	border-radius: 20px
+	text-align: center
+	text-decoration: none
+	color: #fff
+	background-color: $accent
+	&:hover
+		color: #fff
+		text-decoration: none
+		background-color:  #D04336
+
+.header-mid__user
+	margin-top: -7px	
+	a
+		display: inline-block
+		vertical-align: middle	
+		width: 33px
+		height: 33px
+		background-image: url(../img/header/header-sprite-2.png)
+		&:hover
+			transform: scale(1.1)
+
+.header-mid__grouth
+	background-position: -5px -126px
+	&:hover
+		background-position: -5px -158px
+
+.header-mid__checklist
+	background-position: -5px -190px
+	&:hover
+		background-position: -5px -223px
+
+.header-mid__star
+	background-position: -5px -59px
+	&:hover
+		background-position: -5px -92px
+
+.header-mid__cart
+	position: relative
+	margin-left: 10px
+	background-position: -5px 4px
+	.header-mid__cart-active
+		display: none
+	&.active > .header-mid__cart-active
+		position: absolute
+		top: -2px
+		right: 0
+		display: block
+		width: 20px
+		height: 20px
+		border: 2px solid #fff
+		border-radius: 50%
+		background-color: $accent
+		font-size: 12px
+		line-height: 18px
+		color: #fff
+		text-align: center
+
+	&:hover
+		background-position: -5px -28px
+	&.active
+		&:hover
+			transform: none
+		&:after
+			content: ''
+			position: absolute
+			z-index: -1	
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 52px
+			height: 52px
+			border-radius: 26px
+			background-color: #fff
+			box-shadow: 0 7px 12px rgba(68, 78, 109, .2)
+	
+.header-bot
+	background-color: #666666
+
+.menu-main
+	position: relative
+	padding: 0
+	margin: 0
+	font-size: 0
+	text-align: center
+	list-style: none
+
+.menu-main__item
+	display: inline-block
+	font-size: 15px
+	color: #fff
+	text-align: center
+	a
+		position: relative
+		display: block
+		padding: 11px 30px 11px 67px
+		font-family: "OpenSansExtraBold", sans-serif
+		text-transform: uppercase
+		color: #fff
+		&:hover
+			background-color: $accent
+			text-decoration: none
+			&:after
+				display: none
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			transform: translate(0, -50%)
+			left: 20px
+			width: 36px
+			height: 36px
+			background-image: url(../img/header/header-sprite-3.png)
+		&:after
+			content: ''
+			position: absolute
+			top: 50%
+			transform: translate(0, -50%)
+			right: 0
+			width: 1px
+			height: 20px
+			background-color: #fff
+	&:nth-child(1)
+		a:before
+			background-position: -10px 8px
+	&:nth-child(2)
+		a:before
+			background-position: -10px -66px
+	&:nth-child(3)
+		a:before
+			background-position: -10px -108px
+	&:nth-child(4)
+		a:before
+			background-position: -10px -154px
+	&:nth-child(5)
+		a:before
+			background-position: -10px -29px
+		a:after
+			display: none
+
+.menu-sub-1,
+.menu-sub-2,
+.menu-sub-3
+	display: none
+	position: absolute
+	z-index: 10
+	top: 70px
+	left: 0
+	width: 265px
+	padding: 20px 0 20px 20px
+	text-align: left
+	background-color: #fff
+	h3
+		margin: 0
+		margin-bottom: 20px
+		color: #333
+		font-size: 18px
+		line-height: 20px
+	ul
+		padding: 0
+		list-style: none
+		li
+			margin-bottom: 5px
+			a
+				position: relative
+				padding: 0
+				padding-right: 35px
+				background: none
+				font-family: "RobotoRegular", sans-serif
+				font-size: 16px
+				line-height: 24px
+				text-decoration: underline
+				text-transform: none
+				color: #666666
+				&:hover
+					background: none
+					color: $accent
+					&:after
+						display: block
+						color: $accent
+				&:after
+					content: '>'
+					position: absolute
+					right: 35px
+					top: 7px
+					background-color: inherit;
+				&:before
+					display: none
+
+.menu-sub-2
+	top: 0px
+	left: 265px
+	width: 435px
+	min-height: 597px
+	background-color: #eff1f5
+
+.menu-sub-3
+	top: 0px
+	left: 435px
+	width: 435px
+	min-height: 597px
+	background-color: #d8d9db
+
+.menu-sub-1 > ul li:hover .menu-sub-2
+	display: block
+
+.menu-sub-2 > ul li:hover .menu-sub-3
+	display: block
+
+main 
+	background-color: #f8fafe
+
+.section-1
+	margin: 15px 0 35px 0
+
+.gallery
+	margin-bottom: 	15px
+
+.gallery__item
+	position: relative
+	img
+		min-height: 320px
+		width: 100%
+
+.gallery__item-text
+	position: absolute
+	top: 20px
+	left: 10px
+
+.gallery__text-1,
+.gallery__text-2
+	margin: 0
+	font-size: 46px
+	line-height: 55px
+	color: #333333
+
+.gallery__text-1
+	position: relative
+	font-family: "OpenSansBoldItalic", sans-serif
+	&::after
+		content: ''
+		position: absolute
+		left: 0
+		bottom: -7px
+		height: 1px
+		width: 120px
+		background-color: $accent
+
+
+.gallery__text-2
+	font-family: "OpenSansLight", sans-serif
+
+.gallery__btn
+	.btn
+		position: absolute
+		top: 170px
+		left: 15px
+		padding: 15px 15px
+		border: 1px solid #fff
+		border-radius: 35px 
+		outline: none
+		font-family: "OpenSansExtraBold", sans-serif
+		font-size: 20px
+		line-height: 22px	
+		
+
+.gallery .slick-prev,
+.gallery .slick-next 
+    position: absolute
+    bottom: 0
+    right: 0
+    // top: 93%
+    z-index: 10
+    width: 30px
+    height: 30px
+    transform: translateY(-100%) rotate(45deg)
+    transition: 200ms
+    border: 6px solid $accent
+    font-size: 0
+    opacity: .75
+    cursor: pointer
+    background: none  
+    outline: none 
+
+.gallery .slick-prev:hover,
+.gallery .slick-next:hover 
+    transform: translateY(-100%) rotate(45deg) scale(1.2)
+    opacity: .9
+
+.gallery .slick-prev 
+    right: 70px
+    border-right: 0
+    border-top: 0
+
+.gallery .slick-next 
+    right: 20px
+    border-left: 0
+    border-bottom: 0
+
+.section-1__item
+	display: block
+	cursor: pointer
+	position: relative
+	height: 190px
+	margin-bottom: 10px
+	background-size: cover
+	transition: 200ms
+	&:hover
+		transform: scale(1.03)
+	p
+		position: absolute
+		right: 5px
+		top: 50%
+		transform: translateY(-50%)
+		width: 140px
+		margin: 0
+		padding: 0 10px
+		font-family: "OpenSansExtraBold", sans-serif
+		font-size: 24px
+		line-height: 30px
+		color: #fff
+		text-align: center
+		&::before
+			content: ''
+			position: absolute
+			top: -7px
+			left: 50%;
+			transform: translateX(-50%)
+			width: 18px
+			height: 2px
+			background-color: #fff
+		&::after
+			content: ''
+			position: absolute
+			bottom: -20px
+			left: 50%;
+			transform: translateX(-50%)
+			width: 32px
+			height: 15px
+			background-image: url(../img/main/section-1-3.png)
+
+.section-1__item-1
+		background-image: url(../img/main/section-1-1.png)
+
+.section-1__item-2
+	background-image: url(../img/main/section-1-2.png)
+
+.section-2
+	
+
+.section-2__wrap
+	margin-bottom: 	35px
+	
+	background-color: #fff
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.14)
+
+.section-2__item
+	text-align: center	
+	font-family: "RobotoRegular", sans-serif
+	border-right: 1px solid #dedddd
+	span
+		display: inline-block	
+		margin-top: 75px
+		margin-bottom: 5px
+		max-width: 114px
+
+.section-2__item-1
+	background: url(../img/main/section-2-1.png) no-repeat 50% 0
+
+.section-2__item-2
+	background: url(../img/main/section-2-2.png) no-repeat 50% 0
+
+.section-2__item-3
+	background: url(../img/main/section-2-3.png) no-repeat 50% 0
+
+.section-2__item-4
+	border-right: none
+	background: url(../img/main/section-2-4.png) no-repeat 50% 0
+
+.section-3
+	margin-bottom: 0
+
+
+
+
+.section-3__head
+	margin-bottom: 30px
+
+.section-3__head-text
+	position: relative
+	display: inline-block
+	margin: 0
+	padding-right: 75px
+	font-family: "OpenSansExtraBold", sans-serif
+	color: #333
+	font-size: 36px
+	line-height: 40px
+	&:after
+		content: ''
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: 0px
+		width: 61px
+		height: 36px
+
+.section-3-viewed
+	.section-3__head-text
+		&:after
+			background-image: url(../img/main/section-3-1.png)
+
+.section-3-new
+	.section-3__head-text
+		&:after
+			height: 63px	
+			background-image: url(../img/main/section-3-2.png)
+
+.section-3-sale
+	.section-3__head-text
+		&:after	
+			width: 40px
+			height: 58px
+			background-image: url(../img/main/section-3-3.png)
+
+.section-3-sell
+	.section-3__head-text
+		&:after
+			width: 57px
+			height: 57px
+			background-image: url(../img/main/section-3-4.png)
+		
+
+.section-3__head-decor
+	display: inline-block
+	height: 1px
+	width: 100%
+	background-color: #dedddd
+
+.slider
+	height: 390px
+	margin-right: -15px
+
+.product
+	position: relative
+	padding: 10px 15px
+	margin-right: 29px
+	width: 260px
+	min-height: 320px
+	text-align: center
+	background-color: #fff
+	border: 1px solid #e8e3e3
+	border-radius: 5px
+	transition: 200ms
+	.header-mid__user
+		margin-top: 10px
+		display: none
+		a
+			width: 28px
+		.header-mid__cart
+			margin-left: 0
+	&:hover
+		transform: scale(1.01)
+		box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.14)
+		.header-mid__user,
+		.product__art,
+		.product__manuf
+			display: block
+		.product__name
+			font-family: "OpenSansExtraBold", sans-serif
+		.product__btn
+			background-color: $accent
+			color: #fff
+
+.product
+	&::after
+		position: absolute
+		top: 10px
+		right: 0
+		width: 95px
+		height: 26px
+		border-top-left-radius: 2px
+		border-bottom-left-radius: 2px
+		font-family: "OpenSansBold", sans-serif
+		font-size: 13px
+		line-height: 26px
+		text-transform: uppercase
+		color: #fff
+
+.product-new
+	&::after
+		content: 'новинка'
+		background: linear-gradient(90deg, rgba(0,143,50,1) 0%, rgba(81,200,129,1) 100%)
+
+.product-sale
+	&::after
+		content: 'розпродаж'
+		background: linear-gradient(90deg, rgba(0,153,246,1) 0%, rgba(106,202,250,1) 100%)
+
+.product-sell
+	&::after
+		content: 'акція'
+		background: linear-gradient(90deg, rgba(255,60,9,1) 0%, rgba(255,169,0,1) 100%)
+
+
+
+
+			
+
+.product__img-wrap
+	// min-height: 165px
+	margin-bottom: 10px
+img
+	width: 100%
+	margin: 0 auto
+
+
+.product__descr
+	margin: 0 25px
+	font-size: 17px
+	line-height: 20px
+	color: #333
+.product__name,
+.product__art,
+.product__manuf
+	display: block
+
+.product__art,
+.product__manuf
+	display: none
+	font-size: 14px
+	line-height: 17px
+
+.product__manuf
+	span
+		text-decoration: underline
+
+.product__cost
+	display: block
+	margin-top: 5px
+	font-family: "OpenSansExtraBold", sans-serif
+	text-transform: uppercase
+
+.product__btn 
+	display: block
+	padding: 10px 0
+	margin-top: 10px
+	border: 2px solid $accent
+	border-radius: 5px
+	text-transform: uppercase
+	color: $accent
+	font-size: 16px
+	font-family: "OpenSansExtraBold", sans-serif
+
+.slider .slick-list
+	z-index: 10
+
+.slider .slick-dots 
+    position: absolute
+    bottom: 10px
+    left: 50%
+    transform: translateX(-50%)
+    padding: 0
+
+
+.slider .slick-dots li 
+    list-style: none
+    display: inline-block
+    margin-right: 8px
+
+.slider .slick-dots li:last-child 
+    margin-right: 0px
+
+.slider .slick-dots li button 
+    border: none
+    font-size: 0
+    cursor: pointer
+    background: none  
+    outline: none 
+    padding: 0
+    width: 14px
+    height: 14px
+    border-radius: 50%
+    background-color: #e2e8eb
+
+.slider .slick-dots li.slick-active button 
+	background-color: $accent
+
+.section-4
+	background-color: #fff
+	padding: 35px 0
+	color: #333
+
+.section-4__head
+	position: relative
+	display: inline-block
+	margin: 0
+	margin-bottom: 20px
+	padding-right: 75px
+	font-family: "OpenSansExtraBold", sans-serif
+	color: #333
+	font-size: 36px
+	line-height: 40px
+	&:after
+		content: ''
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: 0px
+		width: 61px
+		height: 49px
+		background-image: url(../img/main/section-4-1.png)
+
+.section-4__item
+	margin-bottom: 20px
+	text-align: center
+
+.section-4__img
+	border: 5px solid #fff
+	margin-bottom: 30px
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.14)
+
+.section-4__text
+	margin-bottom: 7px
+	font-size: 22px
+	line-height: 28px
+	font-family: "OpenSansBold", sans-serif
+
+.section-5
+	padding: 90px 0
+	color: #333
+	background: #f8fafe url(../img/main/section-5-bg.png) no-repeat 100% 0
+	background-size: contain
+	box-shadow: inset 0px 20px 50px rgba(0, 0, 0, 0.14)
+
+.section-5__text
+	font-size: 24px 
+	line-height: 44px
+	a
+		color: $accent
+		font-family: "OpenSansExtraBold", sans-serif
+
+.section-5__head
+	margin: 0
+	margin-bottom: 25px
+	font-size: 38px
+	line-height: 44px
+	font-family: "OpenSansExtraBold", sans-serif
+
+.section-5__content
+	margin: 0
+	margin-bottom: 25px
+	font-size: 18px
+	line-height: 26px
+
+.section-5__content-bottom
+	position: relative
+	&:after
+		content: ''			
+		position: absolute
+		bottom: -20px
+		left: 0
+		height: 2px
+		width: 180px
+		background-color: #a2a2a2
+
+.section-5__link
+	display: block
+	margin-top: 35px
+	font-size: 18px
+	line-height: 26px
+	color: $accent
+	text-decoration: underline
+	font-family: "OpenSansExtraBold", sans-serif
+	&:hover
+		text-decoration: none
+		color: $accent
+
+
+.footer
+	font-family: "RobotoRegular", sans-serif
+	line-height: 30px
+	color: #fff
+
+.footer-top
+	padding: 50px 0
+	border-bottom: 1px solid #fff
+	background-color: #323232
+
+.footer-top__pay
+	margin-top: 40px
+	white-space: nowrap;
+	span
+		display: inline-block
+		width: 50px
+		height: 31px
+		margin-right: 5px
+		font-size: 0
+		background-image: url(../img/footer/footer-sprite-1.png)
+		&:nth-child(1)
+			background-position: -5px -0px
+		&:nth-child(2)
+			background-position: -60px -0px
+		&:nth-child(3)
+			background-position: -5px -36px
+		&:nth-child(4)
+			background-position: -60px -36px
+
+.footer-top__social
+	margin-top: 40px
+	white-space: nowrap;
+	a
+		display: inline-block
+		vertical-align: middle
+		width: 35px
+		height: 34px
+		margin-right: 15px
+		font-size: 0
+		background-image: url(../img/footer/footer-sprite-2.png)
+		transition: 200ms
+		&:hover
+			transform: scale(1.1)
+
+.footer-top__yt
+	background-position: -5px -30px
+
+.footer-top__vk
+	background-position: -5px -66px
+
+.footer-top__tw
+	background-position: -5px 5px
+
+.footer-top__fb
+	background-position: -5px -102px
+
+.footer-top__item
+	padding-left: 30px
+	h3
+		margin: 0
+		margin-bottom: 15px
+		padding: 10px 0 20px 0
+		text-transform: uppercase
+		line-height: 20px
+		border-bottom: 1px solid #fff
+	ul
+		margin: 0
+		padding: 0
+		list-style: none
+	a
+		color: #fff
+	span
+		display: block
+
+.footer-top__call
+	font-family: "RobotoBlack", sans-serif
+	text-decoration: underline
+	&:hover
+		text-decoration: none
+
+
+
+.footer-bot
+	padding: 10px
+	border-bottom: 5px solid #313131
+	background-color: #181818
+	& span
+		display: block
+		text-align: center
+
+.footer-bot__text-1
+	font-size: 16px
+	
+.footer-bot__text-2
+	font-size: 14px
+
+.footer-top__btn
+	@extend .header-mid__btn 
+	clear: both
+
+
+
+
+// .slick-slider 
+// 	display: table
+// 	table-layout: fixed
+// 	width: 100%
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+@import "media" // Always at the end

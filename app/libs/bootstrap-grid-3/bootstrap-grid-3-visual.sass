@@ -1,0 +1,73 @@
+=body-size($size)
+	content: '#{$size}'
+	position: fixed
+	z-index: 1000
+	background-color: green
+	color: #fff
+
+@media only screen and (min-width : 320px)
+	body
+		&:before
+		 +body-size("XS (<768)")
+@media only screen and (min-width : 768px)
+	body
+		&:before
+		 +body-size("SM (>=768)")
+@media only screen and (min-width : 992px)
+	body
+		&:before
+		 +body-size("MD (>=992)")
+@media only screen and (min-width : 1200px)
+	body
+		&:before
+		 +body-size("LG (>=1200)")
+
+.container
+	outline: 1px solid green
+
+.row
+	outline: 4px solid #FFF900FF
+
+[class^="col"]
+	&:after
+		content: 'col'
+		position: absolute
+		top: 0
+		left: 0
+		font-size: 16px
+		color: #fff
+		background-color: red
+		opacity: .5	
+		
+$col-count: 1
+@while $col-count <= 12
+	.col-xs-#{$col-count},
+	.col-sm-#{$col-count},
+	.col-md-#{$col-count},
+	.col-lg-#{$col-count}
+		outline: 1px solid red
+		&:before
+			position: absolute
+			top: 0
+			left: 22px
+			font-size: 16px
+			color: #fff
+			background-color: red
+			opacity: .5
+	@media only screen and (min-width : 320px)
+		.col-xs-#{$col-count}
+			&:before
+				content: '-xs-#{$col-count}'
+	@media only screen and (min-width : 768px)
+		.col-sm-#{$col-count}
+			&:before
+				content: '-sm-#{$col-count}'
+	@media only screen and (min-width : 992px)
+		.col-md-#{$col-count}
+			&:before
+				content: '-md-#{$col-count}'
+	@media only screen and (min-width : 1200px)
+		.col-lg-#{$col-count}
+			&:before
+				content: '-lg-#{$col-count}'
+	$col-count: $col-count + 1

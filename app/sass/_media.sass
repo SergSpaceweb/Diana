@@ -1,0 +1,350 @@
+@import "vars"
+
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px)
+	
+	.header-top
+		padding: 5px 0
+
+	.header-top__time
+		padding-left: 0
+		&:before
+			display: none
+
+	.header-top__currency
+		padding-top: 0
+		margin-left: -10px
+
+	.currency-select
+		right: 22px
+
+	.header-top__nav
+		padding-top: 10px
+		margin-left: -26px
+
+	.header-mid
+		padding-top: 7px
+
+	.header-mid__nav
+		width: 270px
+		margin: 0 auto
+
+	.header-mid__contacts
+		padding-top: 10px
+
+	.header-mid__btn
+		padding-top: 20px
+
+	.header-mid__user
+		padding-top: 20px
+		float: right
+
+	.footer-top__item
+		padding-left: 60px
+
+	.menu-sub-1
+		top: 130px
+
+	.menu-sub-2
+		width: 350px
+
+	.menu-sub-3
+		left: 350px
+		width: 340px
+
+	.section-5
+		padding: 50px 0
+
+
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px)
+
+	.header-top__currency
+		padding-top: 10px
+		text-align: right
+
+	.currency-select
+		right: 16px
+
+	.logo
+		margin-bottom: 7px
+
+	.gallery__btn
+		.btn
+			top: 210px
+
+	.footer-top
+		padding: 30px
+
+	.footer-top__item.contacts
+		margin-top: 20px
+		padding-left: 0
+		h3,
+		.footer-top__phone,
+		.footer-top__time
+			float: left
+			margin-right: 65px
+		h3
+			border: none
+			padding-top: 20px
+		a
+			display: inline-block
+			padding-top: 15px
+	
+	.menu-sub-1
+		width: 240px
+
+	.menu-sub-2
+		left: 240px
+		width: 240px
+
+	.menu-sub-3
+		left: 240px
+		width: 240px
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px)
+
+
+	.header-top__time
+		padding-left: 40px
+
+	.header-top__currency
+		padding-top: 0
+
+	
+	.header-top__nav-btn
+		display: block
+		position: absolute
+		z-index: 10
+		width: 30px
+		height: 30px
+		padding: 18px 0px
+		span
+			position: relative
+			display: block
+		&.on
+			span
+				background-color: transparent
+				&:after
+					transform: rotate(-45deg) translate(7px, -8px)
+				&:before
+					transform: rotate(45deg) translate(5px, 5px)
+			& + #menu
+				opacity: 1
+				visibility: visible
+
+	.header-top__nav-btn span:after,
+	.header-top__nav-btn span:before
+		content: ""
+		position: absolute
+		left: 0
+		top: -9px
+
+	.header-top__nav-btn span:after
+		top: 9px
+
+	.header-top__nav-btn span,
+	.header-top__nav-btn span:after,
+	.header-top__nav-btn span:before
+		width: 100%
+		height: 2px
+		background-color: #676767
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+
+
+
+	.header-top__nav
+		display: none
+		position: absolute
+		z-index: 10
+		float: none
+		padding-top: 7px
+		ul
+			padding-left: 15px
+			background-color: rgba(255, 255, 255, .9)
+		li
+			display: block
+			border-right: none
+			border-bottom: 1px solid #e5e6e6
+			a
+				padding: 10px 30px 10px 50px
+			&:nth-child(6)
+				border: none
+				a:after
+					left: 52px
+					top: 16px
+
+	.lang-select
+		right: 140px
+
+	.logo 
+		margin: 0 auto
+		margin-bottom: 7px
+
+	.logo--footer
+		float: left
+		margin: 0
+
+	.header-mid
+		padding-bottom: 20px
+
+	.header-mid__btn
+		margin-right: 0
+
+	.header-mid__user
+		float: none
+		width: 180px
+		padding-top: 10px
+		margin: 0 auto
+
+	.menu-main
+		& > li
+			display: block
+			border-bottom: 1px solid #fff
+			text-align: left
+			a:after
+				display: none
+
+	.menu-sub-1,
+	.menu-sub-2,
+	.menu-sub-3
+		width: 100%
+		position: inherit
+		min-height: inherit
+		h3
+			display: none
+
+	.section-1__item,
+	.gallery
+		margin-left: -15px
+		margin-right: -15px
+		
+	.gallery__btn
+		.btn
+			top: 160px
+
+	.gallery__text-1,
+	.gallery__text-2
+		font-size: 40px
+		line-height: 42px
+
+	.section-2
+		display: none
+
+	.section-3__head-text,
+	.section-4__head
+		font-size: 28px	
+
+	.section-5
+		padding: 30px 0
+		background-size: cover
+			
+	.footer-top
+		padding: 15px
+
+	.footer-top__social,
+	.footer-top__pay	
+		float: right
+		width: 230px
+		
+	.footer-top__pay
+		margin-top: 0
+
+	.footer-top__social
+		margin-top: 15px
+
+
+	
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	
+	.header-mid__contacts
+		padding-left: 0
+
+	.header-mid__tel:before
+		display: none
+
+	.header-mid__mail:before
+		display: none
+
+	.header-mid__btn
+		padding-top: 13px
+
+	.btn
+		border-radius: 30px
+
+	.gallery__text-1,
+	.gallery__text-2
+		font-size: 27px
+		line-height: 35px
+
+	.gallery__btn
+		.btn
+			font-size: 16px	
+			padding: 10px 10px
+
+	.section-5
+		background-position: 70% 0
+
+
+
+	
+
+
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+
+@media only screen and (max-width : 560px)
+	
+	.logo--footer
+		float: none
+		margin: 0 auto
+
+	.footer-top__social,
+	.footer-top__pay
+		float: none
+		margin-top: 15px
+		margin-left: auto
+		margin-right: auto
+
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	.header-top__nav
+		display: block !important
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
